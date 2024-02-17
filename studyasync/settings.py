@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-tg%=tfvdpz6m1#!-+!xc+b7%cj8kk^&0-tj$0s)bq+h5!9-2_2"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 APP_NAME = os.environ.get("FLY_APP_NAME")
 ALLOWED_HOSTS = [f"{APP_NAME}.fly.dev", '127.0.0.1', 'localhost']
@@ -90,8 +90,18 @@ default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
     #}
 #}
 
+# DATABASES = {
+#     'default': config('DATABASE_URL', default=default_dburl, cast=dburl)
+# }
 DATABASES = {
-    'default': config('DATABASE_URL', default=default_dburl, cast=dburl)
+    'default': {
+       'ENGINE': 'django.db.backends.postgresql_psycopg2',
+       'NAME': 'postgresql_studyasync',
+       'USER': 'postgresql_studyasync_user',
+       'PASSWORD': 'C3nXJb3K3blXGC434EgvjOjRjy5Bvo6a',
+       'HOST': 'dpg-cn82msacn0vc738kgsag-a.oregon-postgres.render.com',
+       'PORT': 5432,
+    }
 }
 
 

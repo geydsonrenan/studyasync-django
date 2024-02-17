@@ -1,0 +1,1 @@
+web: gunicorn studyasync.wsgi --log-file-
