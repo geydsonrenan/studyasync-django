@@ -28,9 +28,8 @@ SECRET_KEY = "django-insecure-tg%=tfvdpz6m1#!-+!xc+b7%cj8kk^&0-tj$0s)bq+h5!9-2_2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-APP_NAME = os.environ.get("FLY_APP_NAME")
-ALLOWED_HOSTS = [f"{APP_NAME}.fly.dev", '127.0.0.1', 'localhost']
-CSRF_TRUSTED_ORIGINS = ['https://studypsw.fly.dev', 'http://127.0.0.1']
+ALLOWED_HOSTS = ["studyasync.onrender.com", '127.0.0.1', 'localhost']
+CSRF_TRUSTED_ORIGINS = ['https://studyasync.onrender.com', 'http://127.0.0.1']
 
 
 # Application definition
